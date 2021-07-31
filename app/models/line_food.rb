@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: line_foods
+#
+#  id            :integer          not null, primary key
+#  food_id       :bigint           not null
+#  restaurant_id :bigint           not null
+#  order_id      :bigint
+#  count         :integer          default(0), not null
+#  active        :boolean          default(FALSE), not null
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#
 class LineFood < ApplicationRecord
   belongs_to :food
   belongs_to :restaurant
