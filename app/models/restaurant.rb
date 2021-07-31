@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: restaurants
+#
+#  id            :integer          not null, primary key
+#  name          :string           not null
+#  fee           :integer          default(0), not null
+#  time_required :integer          not null
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#
 class Restaurant < ApplicationRecord
   has_many :foods
   has_many :line_foods, through: :foods
